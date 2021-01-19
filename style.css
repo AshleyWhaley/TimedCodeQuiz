@@ -74,13 +74,15 @@ body {
     background-color: #F6F0E7;
 }
 .buttons {
-    color: teal;
-    border-color: darkviolet;
     margin: auto;
     text-align: center;
     padding-top: 5px;
     width: 40%;
-    
+}
+
+.btn {
+    background-color: teal;
+    padding: 10px;
 }
 
 h1 {
