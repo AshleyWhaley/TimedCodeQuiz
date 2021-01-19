@@ -8,8 +8,6 @@ body {
 /*Start Button Styling*/
 .start_btn {
     font-size: 24px;
-    top: 50%;
-    left: 50%;
     padding: 10px;
     transform: translate(-50%, -50%);
     border: none;
@@ -57,7 +55,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(129, 221, 221);
+    background: rgb(97, 176, 176);
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -67,4 +65,70 @@ body {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+.highScoresLink {
+    color: darkmagenta;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: #F6F0E7;
+}
+.buttons {
+    color: teal;
+    border-color: darkviolet;
+    margin: auto;
+    text-align: center;
+    padding-top: 5px;
+    width: 40%;
+    
+}
+
+h1 {
+    background-color: teal;
+}
+
+h2 {
+    background-color: white;
+}
+
+header {
+    padding: 5px 5px 60px 5px;
+}
+
+p {
+    font-size: 20px;
+    background-color: white;
+    padding: 40px;
+}
+
+.timer {
+    float: right;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: #F6F0E7;
+}
+.title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: salmon;
+}
+
+
+.container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    font-size: 30px;
+    
+}
+
+
+.questionStyle {
+    
+    background-color: rgb(241, 162, 153);
+    text-align: center;
+    padding-top: 5px;
 }

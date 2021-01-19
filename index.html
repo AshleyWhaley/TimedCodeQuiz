@@ -11,16 +11,40 @@
     <title>Code Quiz</title>
 </head>
 <body>  
-        <header>
-            <a class="highScoreTag" href="#">High Scores</a>
-            <div class="title">Timed Coding Quiz</div>
-            <div class="timer"></div>
-                <div class="timer_text">Time Remaining</div>
-                <div class="timer_sec">60</div>
-        </header>
-
+    <header>
+        <div class="title">Timed Coding Quiz</div>
+        <a class="highScoresLink" href="#">High Score:</a>
+        <div class="timer">Time Left: 60</div>
+    </header>
+    
+<!--Quiz Info-->
+<div class="container">
+    <h1>The Magical Coding Quiz</h1>
+        <p>
+            Welcome to the my arena of PAIN! You have 60 seconds to answer all of my mind-bending questions. For each crucial error that is made 10 seconds will be removed from the timer and I will call your mom and tell her about the disappointment you have brought to your family. 
+            <br><br>Not many have made it out alive, now go forth and conquer!
+        </p>
          <!--Start Quiz Button-->
-    <button class="start_btn" type="button">Start Quiz</button>
+    <div class="answers">
+        <button class="start_btn btn-primary btn-lg btn startQuiz" href="#" role="button">Start Quiz</button>
+    </div>
+</div>
+
+<!--Containers for Questions-->
+<div class="container buttons">
+    <div class="answer0 questionStyle"></div>
+    <div class="answer1 questionStyle"></div>
+    <div class="answer2 questionStyle"></div>
+    <div class="answer3 questionStyle"></div>
+    <div class="answer4 questionStyle"></div>
+    <div class="answer5 questionStyle"></div>
+    <div class="answer6 questionStyle"></div>
+    <div class="answer7 questionStyle"></div>
+    <div class="answer8 questionStyle"></div>
+    <div class="answer9 questionStyle"></div>
+    <div class="answer10 questionStyle"></div>
+</div>
+<div class="container submit"></div>
         
 <script src="script.js"></script>
 </body>
