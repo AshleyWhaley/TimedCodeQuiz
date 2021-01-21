@@ -12,8 +12,7 @@ body {
     transform: translate(-50%, -50%);
     border: none;
     outline: none;
-    color: #fff;
-    background:rgb(129, 221, 221);
+    color: #ffefcc;
     cursor: pointer;
     position: absolute;
     z-index: 0;
@@ -38,7 +37,7 @@ body {
 }
 
 .start_btn:active {
-    color: rgb(129, 221, 221)
+    color: #e53201;
 }
 
 .start_btn:active:after {
@@ -55,7 +54,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(97, 176, 176);
+    background: #e53201;
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -81,13 +80,15 @@ body {
 }
 
 .btn {
-    background-color: teal;
+    background-color: #e53201;
     padding: 10px;
     font-size: 20px;
 }
 
+
 h1 {
-    background-color: teal;
+    background-color: #002645;
+    color: #ffefcc;
 }
 
 h2 {
@@ -115,6 +116,7 @@ p {
     text-align: center;
     font-weight: bolder;
     font-size: 30px;
+    color: #ffefcc;
     background-color: #16617e;
     margin-left: 25%;
     margin-right: 25%;
@@ -138,4 +140,7 @@ p {
     background-color: #fe9311;
     text-align: center;
     padding-top: 5px;
+}
+
+
 }
