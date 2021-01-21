@@ -86,8 +86,8 @@ function enterScore() {
     var initialsButton = document.querySelector(".submit");
   initialsButton.addEventListener("click", function(event) {
     event.preventDefault(); 
-    if (localStorage.getItem("user, score") !== null) {
-      scores = JSON.parse(localStorage.getItem("user, score"));
+    if (localStorage.getItem("user") !== null) {
+      scores = JSON.parse(localStorage.getItem("user"));
     }
     if (localStorage.getItem("score") !== null) {
         scores = JSON.parse(localStorage.getItem("score"));
