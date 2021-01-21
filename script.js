@@ -54,11 +54,11 @@ function insertQuestion() {
       "</button>";
   }
 };
-// Adding an event listener for the right answer choice/ button 
+
+// Adding an event listener for the right answer button 
 buttons.addEventListener("click", function(event) {
   event.preventDefault();
  
-
   if (event.target.textContent === questionList[index].correctAnswer) {
     score = score + 5;
   } else {
@@ -82,13 +82,16 @@ function enterScore() {
   container.innerHTML = "<h2>Your score</h2><br>";
   buttons.innerHTML = "Quiz Score: " + score + "." + "<br><br>";
     var form = document.createElement("form");
-    submit.appendChild(form);
+    document.body.appendChild(form);
     var initialsButton = document.querySelector(".submit");
   initialsButton.addEventListener("click", function(event) {
     event.preventDefault(); 
-    if (localStorage.getItem("user,score") !== null) {
-      scores = JSON.parse(localStorage.getItem("user,score"));
+    if (localStorage.getItem("user, score") !== null) {
+      scores = JSON.parse(localStorage.getItem("user, score"));
     }
+    if (localStorage.getItem("score") !== null) {
+        scores = JSON.parse(localStorage.getItem("score"));
+      }
 
     if (scores.length > 0) {
       for (var b = 0; b < scores.length; b++) {
