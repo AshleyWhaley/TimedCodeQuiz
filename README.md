@@ -1,14 +1,14 @@
 # TimedCodeQuiz
-Welcome to my simple JavaScript Quiz
+Welcome to my simple JavaScript Quiz! :heart_eyes_cat:
 [My Timed Code Quiz](https://ashleywhaley.github.io/TimedCodeQuiz/)
 
 ## Languages 
 
 JavaScript was the main language of the project which made the page completely interactive. I created an array of super hard questions and by manipulating the DOM was able to display each question in sequence. 
 
-CSS was used to make this site more stylish like the creator :wink:
+CSS was used to make this site more stylish like the creator. :wink:
 
-HTML was the starting point and bootstrap was used as an accent. 
+HTML was the starting point and bootstrap was used as an accent to render the main component JavaScript. 
 
 ## Description 
 
@@ -20,4 +20,4 @@ Once user has either ran out of time or finished quiz, they are prompted to ente
 
 *Admittedly there is still bugs with the high score link. I will continue to debug.
 
-![mytimdedcodequiz](mywebsite.jpg)
+![my timded code quiz](mywebsite.jpg)
