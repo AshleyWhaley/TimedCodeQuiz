@@ -48,7 +48,7 @@ function insertQuestion() {
   container.style.textAlign = "center";
   for (var i = 0; i < questionList[index].answers.length; i++) {
     document.querySelector(".answer" + i).innerHTML =
-      "<button type='button' class='btn btn-primary' onclick='checkAnswer(this);'>" +
+      "<button type='button' class='btn-primary btn' onclick='checkAnswer(this);'>" +
       questionList[index].answers[i] +
       "</button>";
   }
@@ -79,6 +79,7 @@ function enterScore() {
   container.innerHTML = "<h2>Your score</h2><br>";
   buttons.innerHTML = "Quiz Score: " + score + "." + "<br><br>";
     var initialsButton = document.querySelector(".submit");
+
   initialsButton.addEventListener("click", function(event) {
     event.preventDefault(); 
     if (localStorage.getItem("userScore") !== null) {
@@ -102,6 +103,7 @@ function enterScore() {
   });
 }
 
+//View High scores
 function viewScore() {
     document.querySelectorAll('.container')[2].style.display="none";
     document.querySelector(".buttons").style.display="none";
@@ -114,6 +116,12 @@ function viewScore() {
     container.appendChild(scoreList);
   }
 }
+
+highScoresEl.addEventListener("click", function (event){
+    document.querySelector('.quizform').style.display="none";
+    scoreList();
+
+}) 
 
 
 startQuiz();
