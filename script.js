@@ -7,8 +7,7 @@ var container = document.querySelector(".container");
 var submit = document.querySelector(".submit");
 var highScoresEl = document.querySelector(".highScoresLink");
 var clear = document.querySelector(".clear");
-var form = document.querySelector(".submitForm");
-var scores = [];
+var userScores = [];
 var save = [];
 var index = 0;
 var score = 0;
@@ -49,17 +48,16 @@ function insertQuestion() {
   container.style.textAlign = "center";
   for (var i = 0; i < questionList[index].answers.length; i++) {
     document.querySelector(".answer" + i).innerHTML =
-      "<button type='button' class='btn btn-primary'>" +
+      "<button type='button' class='btn btn-primary' onclick='checkAnswer(this);'>" +
       questionList[index].answers[i] +
       "</button>";
   }
 };
 
 // Adding an event listener for the right answer button 
-buttons.addEventListener("click", function(event) {
-  event.preventDefault();
+function checkAnswer(answer) {
  
-  if (event.target.textContent === questionList[index].correctAnswer) {
+  if (answer.textContent === questionList[index].correctAnswer) {
     score = score + 5;
   } else {
     remainingSeconds = remainingSeconds - 5;
@@ -69,33 +67,27 @@ buttons.addEventListener("click", function(event) {
     insertQuestion();
   } else {
     remainingSeconds = 0;
-    enterScore();
   }
   
-});
-
-
+};
 
 
 //enter score screen
 function enterScore() {
+    document.querySelectorAll(".container")[2].style.display="block";
+
   container.innerHTML = "<h2>Your score</h2><br>";
   buttons.innerHTML = "Quiz Score: " + score + "." + "<br><br>";
-    var form = document.createElement("form");
-    document.body.appendChild(form);
     var initialsButton = document.querySelector(".submit");
   initialsButton.addEventListener("click", function(event) {
     event.preventDefault(); 
-    if (localStorage.getItem("user") !== null) {
-      scores = JSON.parse(localStorage.getItem("user"));
+    if (localStorage.getItem("userScore") !== null) {
+      userScores = JSON.parse(localStorage.getItem("userScore"));
     }
-    if (localStorage.getItem("score") !== null) {
-        scores = JSON.parse(localStorage.getItem("score"));
-      }
 
-    if (scores.length > 0) {
-      for (var b = 0; b < scores.length; b++) {
-        save.push(scores[b]);
+    if (userScores.length > 0) {
+      for (var b = 0; b < userScores.length; b++) {
+        save.push(userScores[b]);
       }
     }
 
@@ -105,12 +97,14 @@ function enterScore() {
     save.push(userScore);
 
 // Storing initials/score in local storage
-    localStorage.setItem("user,score", JSON.stringify(save));
+    localStorage.setItem("userScore", JSON.stringify(save));
     viewScore();
   });
 }
 
 function viewScore() {
+    document.querySelectorAll('.container')[2].style.display="none";
+    document.querySelector(".buttons").style.display="none";
   container.innerHTML = "<h2>High Scores!</h2><br>";
   for (var a = 0; a < save.length; a++) {
     var scoreList = document.createElement("div");
@@ -119,9 +113,6 @@ function viewScore() {
       save[a].userInitials + " " + "   Score: " + save[a].score;
     container.appendChild(scoreList);
   }
-  buttons.innerHTML = "<button type='button' class='btn btn-primary'>" + "Clear Scores" +
-  "</button>";
-  form.innerHTML = "<div></div>";
 }
 
 
@@ -179,7 +170,7 @@ var questionList = [
         "console.log",
         "Download an extension"
       ],
-      correctAnswer: "for loops"
+      correctAnswer: "console.log"
     },
     { 
       question:
