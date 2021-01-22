@@ -114,14 +114,10 @@ function viewScore() {
       "User: " +
       save[a].userInitials + " " + "   Score: " + save[a].score;
     container.appendChild(scoreList);
+  
   }
-}
+};
 
-highScoresEl.addEventListener("click", function (event){
-    document.querySelector('.quizform').style.display="none";
-    scoreList();
-
-}) 
 
 
 startQuiz();
